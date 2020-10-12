@@ -1,0 +1,16 @@
+{
+  "name": "hallowmas-costume",
+  "version": "1.0.0",
+  "description": "万圣节戏精装扮俱乐部",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
+}

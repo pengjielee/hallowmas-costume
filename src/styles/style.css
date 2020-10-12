@@ -1,0 +1,311 @@
+*{ margin:0;padding:0; }
+html,body{ height: 100vh; }
+
+button{ background: blue; color:#fff; padding:5px 10px;border:none; }
+.control{width:100%;position: fixed; left:0;bottom: 0;font-size: 0;z-index: 101;}
+
+.control-main{ background: #333; position: relative;}
+.control-action{position: absolute;right: 0;bottom:80px;}
+.control-action .row .save{  width:40px;height: 40px;line-height:40px;border-radius: 20px;background: #000;color:#fff;text-align: center;font-size:12px; margin:0 20px 20px 0;}
+
+.control-bar{ display: flex; overflow-x: scroll;background: #0f0e14;padding:15px;}
+.control-bar li{ width:55px; float: left;display: flex;flex-shrink:0; align-items: center;-webkit-transition: all linear .3s}
+.control-bar li .icon{ 
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: #413e4c url(../images/icons/bar1.png) center no-repeat;
+  background-size:20px 20px;
+}
+.control-bar li:nth-child(2) .icon{
+  background: #413e4c url(../images/icons/bar2.png) center no-repeat;
+  background-size:20px 20px;
+}
+.control-bar li:nth-child(3) .icon{
+  background: #413e4c url(../images/icons/bar3.png) center no-repeat;
+  background-size:20px 20px;
+}
+.control-bar li:nth-child(4) .icon{
+  background: #413e4c url(../images/icons/bar4.png) center no-repeat;
+  background-size:20px 20px;
+}
+.control-bar li .text{ color:#fff;font-size:12px;text-align: center;display: none;width: 40px;}
+.control-bar li.active{ width: 80px; }
+.control-bar li.active .text{display: block;}
+
+
+.control-list .control-item{ display: none; } 
+.control-list .control-item:first-child{ display: block; }
+.control-list .control-item li.active .icon{ margin-top: -2px;}
+.control-list .control-item li.active .text{  width:25px; border-bottom:2px solid red;}
+.control-list .control-item li.active{ border-bottom:2px solid red; }
+.control-list .control-item .control-elements{ display:flex; align-items: center; overflow-x: scroll;}
+.control-list .control-elements{ padding:25px 15px 15px; }
+.control-list .element{width:60px;display: flex; align-items: center;flex-direction: column;flex-shrink: 0;}
+.control-list .element .icon{ margin-bottom: 10px;  }
+
+.control-object .element{ width: auto; margin-right: 30px;}
+.control-list .control-role li .icon{ 
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: url(../images/icons/role1.png) center no-repeat;
+  background-size:40px 40px;
+  -webkit-transition: all linear .1s;
+}
+.control-list .control-role li:nth-child(2) .icon{
+  background: url(../images/icons/role2.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-role li:nth-child(3) .icon{
+  background: url(../images/icons/role3.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-role li:nth-child(4) .icon{
+  background: url(../images/icons/role4.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-role li:nth-child(5) .icon{
+  background: url(../images/icons/role5.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-role li:nth-child(6) .icon{
+  background: url(../images/icons/role6.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-role li:nth-child(7) .icon{
+  background: url(../images/icons/role7.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-role li:nth-child(8) .icon{
+  background: url(../images/icons/role8.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-role li:nth-child(9) .icon{
+  background: url(../images/icons/role9.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-role li:nth-child(10) .icon{
+  background: url(../images/icons/role10.png) center no-repeat;
+  background-size:40px 40px;
+}
+
+
+.control-list .control-scene li .icon{ 
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: #413e4c url(../images/icons/scene1.png) center no-repeat;
+  background-size:40px 40px;
+  -webkit-transition: all linear .1s;
+}
+.control-list .control-scene li:nth-child(2) .icon{
+  background: #413e4c url(../images/icons/scene2.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-scene li:nth-child(3) .icon{
+  background: #413e4c url(../images/icons/scene3.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-scene li:nth-child(4) .icon{
+  background: #413e4c url(../images/icons/scene4.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-scene li:nth-child(5) .icon{
+  background: #413e4c url(../images/icons/scene5.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-scene li:nth-child(6) .icon{
+  background: #413e4c url(../images/icons/scene6.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-scene li:nth-child(7) .icon{
+  background: #413e4c url(../images/icons/scene7.png) center no-repeat;
+  background-size:40px 40px;
+}
+
+.control-list .control-object li .icon{ 
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: url(../images/object1.png) center no-repeat;
+  background-size:40px 40px;
+  -webkit-transition: all linear .1s;
+}
+.control-list .control-object li:nth-child(2) .icon{
+  background: url(../images/object2.png) center no-repeat;
+  background-size:20px 40px;
+}
+.control-list .control-object li:nth-child(3) .icon{
+  background: url(../images/object3.png) center no-repeat;
+  background-size:72px 40px;
+}
+.control-list .control-object li:nth-child(4) .icon{
+  background: url(../images/object4.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(5) .icon{
+  background: url(../images/object5.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(6) .icon{
+  background: url(../images/object6.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(7) .icon{
+  background: url(../images/object7.png) center no-repeat;
+  background-size:20px 40px;
+}
+.control-list .control-object li:nth-child(8) .icon{
+  background: url(../images/object8.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(9) .icon{
+  background: url(../images/object9.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(10) .icon{
+  background: url(../images/object10.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(11) .icon{
+  background: url(../images/object11.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(12) .icon{
+  background: url(../images/object12.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(13) .icon{
+  background: url(../images/object13.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(14) .icon{
+  background: url(../images/object14.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(15) .icon{
+  width:80px;
+  height:30px;
+  background: url(../images/object15.png) center no-repeat;
+  background-size:80px 30px;
+}
+.control-list .control-object li:nth-child(16) .icon{
+  width:100px;
+  height:30px;
+  background: url(../images/object16.png) center no-repeat;
+  background-size:100px 30px;
+}
+.control-list .control-object li:nth-child(17) .icon{
+  width:80px;
+  height:30px;
+  background: url(../images/object17.png) center no-repeat;
+  background-size:80px 30px;
+}
+.control-list .control-object li:nth-child(18) .icon{
+  width:100px;
+  height:30px;
+  background: url(../images/object18.png) center no-repeat;
+  background-size:100px 30px;
+}
+.control-list .control-object li:nth-child(19) .icon{
+  width:100px;
+  height:30px;
+  background: url(../images/object19.png) center no-repeat;
+  background-size:100px 30px;
+}
+.control-list .control-object li:nth-child(20) .icon{
+  width:100px;
+  height:30px;
+  background: url(../images/object20.png) center no-repeat;
+  background-size:100px 30px;
+}
+.control-list .control-object li:nth-child(21) .icon{
+  width:100px;
+  height:40px;
+  background: url(../images/object21.png) center no-repeat;
+  background-size:100px 40px;
+}
+.control-list .control-object li:nth-child(22) .icon{
+  width:90px;
+  height:40px;
+  background: url(../images/object22.png) center no-repeat;
+  background-size:90px 40px;
+}
+.control-list .control-object li:nth-child(23) .icon{
+  width:80px;
+  height:30px;
+  background: url(../images/object23.png) center no-repeat;
+  background-size:80px 30px;
+}
+.control-list .control-object li:nth-child(24) .icon{
+  width:80px;
+  height:30px;
+  background: url(../images/object24.png) center no-repeat;
+  background-size:80px 30px;
+}
+.control-list .control-object li:nth-child(25) .icon{
+  width:80px;
+  height:30px;
+  background: url(../images/object25.png) center no-repeat;
+  background-size:80px 30px;
+}
+.control-list .control-object li:nth-child(26) .icon{
+  background: url(../images/object26.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(27) .icon{
+  background: url(../images/object27.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-object li:nth-child(28) .icon{
+  background: url(../images/object28.png) center no-repeat;
+  background-size:40px 40px;
+}
+
+.control-list .control-mask li .icon{ 
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: url(../images/mask1.png) center no-repeat;
+  background-size:40px 40px;
+  -webkit-transition: all linear .1s;
+}
+.control-list .control-mask li:nth-child(2) .icon{
+  background: url(../images/mask2.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-mask li:nth-child(3) .icon{
+  background: url(../images/mask3.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-mask li:nth-child(4) .icon{
+  background: url(../images/mask4.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-mask li:nth-child(5) .icon{
+  background: url(../images/mask5.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-mask li:nth-child(6) .icon{
+  background: url(../images/mask6.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-mask li:nth-child(7) .icon{
+  background: url(../images/mask7.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-mask li:nth-child(8) .icon{
+  background: url(../images/mask8.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-mask li:nth-child(9) .icon{
+  background: url(../images/mask9.png) center no-repeat;
+  background-size:40px 40px;
+}
+.control-list .control-mask li:nth-child(10) .icon{
+  background: url(../images/mask10.png) center no-repeat;
+  background-size:40px 40px;
+} 
+
+.toast{ background: #000;color:#fff; width:200px; display: none; position: fixed;top:50%;left:50%;z-index: 1000;transform: translate(-50%,-50%);border-radius: 5px;padding:15px 20px;text-align: center;}
